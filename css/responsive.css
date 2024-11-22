@@ -1,0 +1,183 @@
+@media only screen and (max-width:1750px){
+    h1 { font-size: 38px; }
+    h2 { font-size: 35px; }
+    p { line-height: 24px; font-size: 18px; }
+    .wrapper { max-width: 1300px; }
+    .banner { padding: 250px 0 200px; }
+    .banner p{    font-size: 18px;letter-spacing: 1px;}
+    .Discover_Our_World .colin p { max-width: 80%; }
+    .about .right_col p { font-size: 18px; line-height: 1.5; }
+    footer .yoga { top: -62px; }
+
+}
+@media only screen and (max-width:1599px){
+    h3 { font-size: 24px; }
+    header nav>ul>li.mega-menu>.sub-menu { right: auto; left: -280px; }
+    header nav>ul>li.mega-menu>.sub-menu::after { margin-left: -180px; }
+    .banner { padding: 250px 0 160px; }
+    footer .bg{ background-size: 110% 134%; background-position: top 30% center; }
+    footer .yoga { top: -102px; left: -70px; }
+
+    
+}
+@media only screen and (max-width:1399px)
+{
+    .wrapper { max-width: 1200px; }
+    .Discover_Our_World .left_col { min-height: 420px; }
+    .Discover_Our_World .right_col { width: 620px; height: 620px; }
+
+
+}
+@media only screen and (max-width:1279px) /* container size */
+{
+    .wrapper { padding: 0px 20px;}
+    header nav>ul>li.mega-menu>.sub-menu { right: auto; left: -190px; }
+    header nav>ul>li.mega-menu>.sub-menu::after { margin-left: -260px; }
+    header nav>ul>li>.sub-menu { right: -100px; }
+    .Discover_Our_World .colin img { margin-bottom: 10px; max-width: 60px; }
+    .Discover_Our_World .right_col { width: 530px; height: 530px; }
+    .Discover_Our_World { padding: 30px 0 0; }
+    .the_best { padding: 50px 0 125px; }
+    .the_best .wrapper { padding: 0px 50px; }
+    .model {padding: 0px 20px;}
+    .model .wrapper { margin-top: -80px; padding: 30px 0; }
+    .model .col h3 { font-size: 32px; line-height: 24px; margin-bottom: 10px; }
+    .model .col .img { max-width: 60px; height: 70px; margin-bottom: 15px; }
+    .model .col p { font-size: 19px; line-height: 25px; margin-bottom: 0; }
+    .article_news .custom-nav { width: calc(100% - 40px); }
+    .article_news .col .img { height: 150px; }
+    .article_news .col { border-radius: 18px; padding: 20px 0 20px 20px; min-height: 250px; margin-top: 20px; }
+    .article_news { padding: 60px 0 50px; }
+    footer .bottom_col { padding: 30px 0px 30px; }
+    footer .yoga { top: 0; left: 0; max-width: 150px; }
+    footer .col:first-child { padding-left: 10px; }
+    footer .col:nth-child(2) { width: 33%; }
+    footer .col h3 { font-size: 20px; }
+    footer .col:nth-child(3) { width: 30%; }
+    footer .col:nth-child(3) a:not(.btn) { width: 25px; height: 25px; margin-right: 10px; }
+
+}
+.social{display: none;}
+.bottom_col .bg{display: none;}
+.bottom_col .close{display: none;}
+header .hum{display: none;}
+@media only screen and (max-width:1023px)
+{
+    .bottom_col .bg{display:block;cursor: pointer;}
+    .bottom_col .close { position: absolute; top: 40px; right: 20px; display: block; }
+    header .bottom_col.active .close {top: 25px;}
+    header .hum{max-width:20px;display: block;}
+    header .bottom_col { margin-top: 0; border: none; width: 100%; height: 100vh; background-color:#00000080; position: fixed; left: 0; top: 0;    transition: 0.3s ease all;opacity: 0;pointer-events: none;}
+    header .bottom_col.active {opacity: 1;pointer-events: all;}
+    header .bottom_col nav{position: absolute; top: 0; bottom: 0; width: 260px; background-color: rgba(255, 255, 255, 1); left: 0; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; padding: 30px 0;    transform: translateX(-101%);transition: 0.3s ease all;}
+    header .bottom_col.active nav{transform: translateX(0);}
+    header .bottom_col nav>ul{display: block;}
+    header .bottom_col nav>ul>li{border-bottom: 1px solid #ececec;}
+    header .bottom_col nav>ul>li:hover{background-color: rgba(0,0,0,.05);}
+    header .bottom_col nav>ul>li>a{font-size: 12px;padding:12px 20px 12px;color: rgba(102,102,102,.85);font-weight: 500;line-height: 1.67;width: 100%;letter-spacing: 1px;}
+    header nav>ul>li>a::after{display: none;}
+    header nav>ul>li.menu-item::after{display: none;}
+    header .social{display: flex;padding: 20px;}
+    header .social a{border: 2px solid #c0c0c0;}
+    header .social a+a{margin-left: 15px;}
+
+    header nav>ul>li>.sub-menu { position: relative; top: 0; min-width: 100%; z-index: 9; padding: 0px 20px; background-color: transparent; box-shadow: none; border-radius: 0; right: auto !important; opacity: 1; pointer-events: all; left: 0 !important;padding-bottom: 20px; }
+    header nav>ul>li>.sub-menu::after{display: none !important;}
+    header nav>ul>li>.sub-menu>li>a { margin: 0px 5px 0 10px; padding: 5.5px 0; color: #666; width: 100%; }
+    header nav>ul>li>.sub-menu>li{border: none;}
+    /* mega menu */
+    header nav>ul>li.mega-menu>.sub-menu { opacity: 1; pointer-events: all; width: 100%; padding: 0px 0px 20px; display: block; }
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item { min-width: 100%; border: none; padding: 0px 20px 10px; }
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul{padding-left: 10px;}
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li{border: none;}
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a{color: var(--black); font-size: 13px; text-transform: uppercase; font-weight: bold; width: 100%; padding: 4px 0;}
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li>a { color: #666; padding: 6px 5px 6px 10px; }
+    header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li>a::before{display: none;}
+    header .bottom_col nav>ul>li.menu-item>a+.drop{position: absolute;right:0;top: 0px;width: 44px;height: 44px;background-image: url(../images/menu_arrow.svg); background-repeat: no-repeat; background-size: contain;background-size: 20px; background-position: center;}
+    header .bottom_col nav>ul>li.menu-item>a+.drop.active{transform: scale(-1);}
+    header nav>ul>li>.sub-menu{transition: none;display: none;}
+    header nav>ul>li.mega-menu>.sub-menu{display: none;}
+    /* mega menu finish */
+    header .right_col {display: none;}
+
+
+
+    .banner { padding: 190px 0 210px; }
+    .banner .wrapper>div { width: 100%; }
+    .Discover_Our_World .inner { position: relative; padding: 20px 0; display: flex ; flex-wrap: wrap; }
+    .Discover_Our_World .right_col { width: 530px; height: 530px; position: relative; order: 1; }
+    .Discover_Our_World .left_col { min-height: 100%; order: 2; width: 100%; }
+    .about .right_col { width: 100%; margin-top: 20px; }
+    .about { padding: 40px 0; }
+    footer .col { width: 35%; }
+    footer .col:nth-child(2) { width: 55%; padding-right: 50px; }
+    footer .col:nth-child(3) { width: 100%; padding: 20px 0;}
+    footer .bg { background-size: 190% 124%; background-position: top 30% center; }
+    footer .yoga { top: -80px; left: 0; max-width: 180px; }
+
+
+
+
+}
+@media only screen and (max-width:767px)
+{
+    header .brand img { max-height: 46px; }
+    .banner { padding: 130px 0 70px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 26px; }
+    h6 { font-size: 14px; }
+    p { line-height: 23px; font-size: 15px; }
+    h3 { font-size: 22px; }
+
+    .banner p { font-size: 16px; letter-spacing: 1px; }
+    .btn { font-size: 14px; line-height: 38px; padding: 0px 32px; margin-left: 15px; }
+    .banner .btn { margin-top: 6px; }
+    .btn::after, .btn::before { width: 30px; height: 40px; left: -15px; }
+    .btn::before { left: auto; right: -15px; }
+    .Discover_Our_World .right_col { width: 280px; height: 280px; }
+    .Discover_Our_World .left_col { padding: 20px; }
+    .Discover_Our_World .colin p { max-width: 100%; }
+    .about h2{margin-bottom: 0;font-size: 28px;}
+    .about .wrapper {padding-bottom: 65px;}
+    .about .wrapper .btn{position: absolute;bottom: 0;left: 20px;}
+    .about .right_col p { font-size: 15px; line-height: 1.6; margin-bottom: 15px; }
+    .the_best .wrapper { padding: 0px 20px; }
+    .the_best { padding: 40px 0 125px; }
+    .the_best h2{        font-size: 23px;}
+    .the_best  .col { width: 90px; height: 90px; }
+    .the_best .colin { padding: 18px 13px; }
+    .custom-nav .custom-prev { margin-left: -10px; }
+    .custom-nav .custom-next { margin-right: -10px; }
+    .model .col { padding: 0 15px; width: 50%; }
+    .model .col .img { max-width: 45px; height: 50px; margin-bottom: 15px; }
+    .model .col h3 { font-size: 18px; line-height: 16px; margin-bottom: 10px; }
+    .model .col p { font-size: 16px; line-height: 18px; margin-bottom: 0; }
+    .model .wrapper { border-radius: 20px; }
+    .article_news { padding: 40px 0 40px; }
+    .owl-dots .owl-dot { width: 12px; height: 12px; margin: 0 2px; }
+    .owl-dots .owl-dot::after { width: 6px; height: 6px; }
+    .article_news .col { border-radius: 18px; padding: 20px 0 20px 20px; min-height: 200px; margin-top: 0; }
+    .article_news .col:hover { background: #9DB0F4; box-shadow: none; margin-top: 0; }
+    .article_news .owl-item { padding: 0; }
+    .article_news .owl-dots{display: none;}
+
+    footer .col:first-child { padding-left: 0; order: 3; width: 100%;}
+    footer .col:nth-child(2) { width: 100%; padding-right: 0; order: 1; }
+    footer .col:nth-child(3) { width: 100%; padding: 20px 0; order: 2;         text-align: left;}
+    footer .col:nth-child(3) div{justify-content: flex-start;}
+    footer .inner{padding-bottom: 50px;position: relative;margin-top: 40px; }
+    footer .col .btn.btn-black { position: absolute; bottom: 0; left: 0; right: 0; width: fit-content; margin: 0 auto; }
+    footer .col h3 { font-size: 18px; font-weight: 600; }
+    footer { padding: 55px 0 0; margin-top: 30px;}
+    footer .bg { background-size: auto; background-position: top center; }
+    footer .logo { max-width: 180px; }
+    footer .yoga { top: -120px; left: 0; max-width: 130px; }
+    footer .col:nth-child(2) h3 { text-align: left; }
+    .custom-nav span { width: 30px; height: 30px; }
+    .custom-nav span img{max-width: 9px;}
+    .article_news .custom-nav .custom-next { margin-right: -15px; }
+    .article_news .custom-nav .custom-prev { margin-left: -15px; }
+    .the_best .col { box-shadow: -5px -5px 10px 0 rgb(255 255 255 / 80%), 5px 6px 12px rgba(0, 0, 0, .1); }
+    .the_best .colin { padding: 10px 10px; }
+    
+}

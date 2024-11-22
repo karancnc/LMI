@@ -1,0 +1,133 @@
+/* Window Load functions */
+
+jQuery(window).load(function($){
+    setTimeout(function(){
+
+    });
+});
+
+
+jQuery(document).ready(function($){
+
+    var _lhref = $('.main_circle .col:first-child').attr('href');
+    var _limg = $('.main_circle .col:first-child').attr('data-img');
+    var _ltitle = $('.main_circle .col:first-child').attr('data-title');
+    var _lsubtitle = $('.main_circle .col:first-child').attr('data-subtitle');
+    var _lbgimg = $('.main_circle .col:first-child').attr('data-bgimg');
+    var _lbgimg = 'url('+_lbgimg+')';
+
+    $('.Discover_Our_World .colin .btn').attr('href' , _lhref);
+    $('.Discover_Our_World .colin img').attr('src' , _limg);
+    $('.Discover_Our_World .colin h3').text(_ltitle);
+    $('.Discover_Our_World .colin p').text(_lsubtitle);
+    $('.Discover_Our_World .right_col .bg').css('background-image' , _lbgimg);
+    
+    $('.main_circle .col').hover(function(){
+        var _href =  $(this).attr('href');
+        var _bg =  $(this).attr('data-bgimg');
+        var _bg = 'url('+_bg+')';
+        var _img =  $(this).attr('data-img');
+        var _title =  $(this).attr('data-title');
+        var _subtitle =  $(this).attr('data-subtitle');
+        $('.Discover_Our_World .right_col .bg').css('background-image' , _bg);
+        $('.Discover_Our_World .colin img').attr('src' , _img);
+        $('.Discover_Our_World .colin .btn').attr('href' , _href);
+        $('.Discover_Our_World .colin h3').text(_title);
+        $('.Discover_Our_World .colin p').text(_subtitle);
+    });
+
+    if ($('.the_best').length > 0) {
+        var owl = $('.the_best .inner').owlCarousel({
+            items: 7,
+            loop: true,
+            //autoWidth: true,
+            margin: 0,
+            nav:false,
+            dots:false,
+            //center: true,
+            //autoplay: true,
+            //autoPlaySpeed: 500,
+            //autoPlayTimeout: 500,
+            //smartSpeed: 500,
+            responsive:{
+                0:{                  
+                    autoWidth: true,
+                    center:true,
+                },
+                1280:{
+                    autoWidth: true,
+                    center:true,
+                },
+                1400:{
+                    items: 6,
+                }
+              }
+        });
+         // Custom Navigation
+        $('.the_best .custom-prev').click(function () {
+            owl.trigger('prev.owl.carousel');
+        });
+
+        $('.the_best .custom-next').click(function () {
+            owl.trigger('next.owl.carousel');
+        });
+    }
+    if ($('.article_news').length > 0) {
+        var owl1 = $('.article_news .wrap').owlCarousel({
+            items: 3,
+            //loop: true,
+            //autoWidth: true,
+            margin: 0,
+            nav:false,
+            dots:true,
+            //center: true,
+            //autoplay: true,
+            //autoPlaySpeed: 500,
+            //autoPlayTimeout: 500,
+            //smartSpeed: 500,
+            responsive:{
+                0:{                  
+                    items: 1,
+                },
+                768:{                  
+                    items: 2,
+                },
+                1024:{                  
+                    items: 3,
+                },
+            }
+        });
+         // Custom Navigation
+        $('.article_news .custom-prev').click(function () {
+            owl1.trigger('prev.owl.carousel');
+        });
+
+        $('.article_news .custom-next').click(function () {
+            owl1.trigger('next.owl.carousel');
+        });
+    }
+
+    /* mobile menu  */
+    if ($(window).width() < 1024) {
+        $('header .bottom_col nav>ul>li.menu-item>a').after('<span class="drop"></span>');
+    }
+    $('header .hum').click(function(){
+        $('header .bottom_col').addClass('active');
+    });
+    $('header .bottom_col .close').click(function(){
+        $('header .bottom_col').removeClass('active');
+    });
+    $('header .bottom_col nav>ul>li.menu-item>a+.drop').click(function(){
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+
+
+
+});
+
+jQuery(window).resize(function($){
+
+})
+
