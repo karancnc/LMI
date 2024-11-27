@@ -8,6 +8,9 @@
     .Discover_Our_World .colin p { max-width: 80%; }
     .about .right_col p { font-size: 18px; line-height: 1.5; }
     footer .yoga { top: -62px; }
+    .inner_banner { padding: 220px 0 225px; min-height: 640px; }
+    .inner_banner p { font-size: 20px; }
+    .about_image_link_blog { padding: 55px 0 75px; }
 
 }
 @media only screen and (max-width:1599px){
@@ -56,11 +59,17 @@
     footer .col:nth-child(3) { width: 30%; }
     footer .col:nth-child(3) a:not(.btn) { width: 25px; height: 25px; margin-right: 10px; }
 
+    /* about */
+    .about_image_link_blog .col { width: calc(33.33% - 2%); }
+    .about_image_link_blog { padding: 45px 0 25px; }
+
+
 }
 .social{display: none;}
 .bottom_col .bg{display: none;}
 .bottom_col .close{display: none;}
 header .hum{display: none;}
+.about_text_logo .colin span{display: none;}
 @media only screen and (max-width:1023px)
 {
     .bottom_col .bg{display:block;cursor: pointer;}
@@ -99,9 +108,6 @@ header .hum{display: none;}
     header nav>ul>li.mega-menu>.sub-menu{display: none;}
     /* mega menu finish */
     header .right_col {display: none;}
-
-
-
     .banner { padding: 190px 0 210px; }
     .banner .wrapper>div { width: 100%; }
     .Discover_Our_World .inner { position: relative; padding: 20px 0; display: flex ; flex-wrap: wrap; }
@@ -114,15 +120,26 @@ header .hum{display: none;}
     footer .col:nth-child(3) { width: 100%; padding: 20px 0;}
     footer .bg { background-size: 190% 124%; background-position: top 30% center; }
     footer .yoga { top: -80px; left: 0; max-width: 180px; }
-
-
-
+    .inner_banner { padding: 190px 0 190px; }
+    .btn { font-size: 16px; padding: 0px 19px; }
+    .about_text_logo .colin span{display: block;        color: #000; text-align: center; font-size: 40px; font-style: normal; font-weight: 600; line-height: 30px; opacity: 0.05; position: absolute; top: 30px; right: 20px;}
+    .about_text_logo .colin .text{width: 100%;padding: 0;order: 2;}
+    .about_text_logo .wrap{padding: 0px 20px;}
+    .about_text_logo .colin .img { width: 140px; padding: 0; order: 1;margin-bottom: 15px; }
+    .about_text_logo .colin+.colin{ background-color: #ffffff !important; margin-bottom: 40px; border-radius: 20px; position: relative;padding: 20px 20px 10px 15px;}
+    .about_text_logo .colin:last-child{margin-bottom: 0;}
+    .about_text_logo { padding: 25px 0px 25px; }
+    .about_image_text { padding: 25px 0px 40px; }
+    .about_image_text .col { width: 100%; }
+    .about_image_text div.col { width: 100%; padding: 40px 0; }
+    .inner_banner { padding: 170px 0 170px; min-height: 536px; }
 
 }
 @media only screen and (max-width:767px)
 {
     header .brand img { max-height: 46px; }
     .banner { padding: 130px 0 70px; }
+    h1, h2, h3, h4, h5, h6{margin-bottom: 10px;}
     h1 { font-size: 26px; }
     h2 { font-size: 26px; }
     h6 { font-size: 14px; }
@@ -180,4 +197,27 @@ header .hum{display: none;}
     .the_best .col { box-shadow: -5px -5px 10px 0 rgb(255 255 255 / 80%), 5px 6px 12px rgba(0, 0, 0, .1); }
     .the_best .colin { padding: 10px 10px; }
     
+    /* about */
+    .inner_banner { padding: 170px 0 170px; }
+    .inner_banner .btn { margin-top: 10px; }
+    .about_image_link_blog { padding: 25px 0 25px; }
+    .about_image_link_blog .col { width: 100%; margin: 0  0 20px;}
+    .about_two_containts { padding: 25px 0px 45px; }
+    .about_two_containts .col { padding: 0; width: 100%; }
+    .btn_email span::after { top: 4px; }
+    .about_two_containts .col .btn { padding: 0px 20px; margin-top: 25px; width: calc(100% - 8px); margin-left: 5px; }
+    .btn_email span::after, .btn_yes span::after { width: 16px; background-size: 15px; top: 3px; margin-left: 1px; }
+    .about_image_text .wrapper>a .bg{display: none;}
+    .about_image_text .wrapper>a img{opacity: 1;}
+    .about_image_text .col h3 { margin-bottom: 0; font-size: 18px; line-height: 30px; padding: 20px; }
+    .about_image_text div.col { padding:0; }
+    .about_text_logo .colin:first-child a{display: none;}
+    .inner_banner p { font-size: 16px; }
+    .inner_banner p br{display: none;}
+    .inner_banner { padding: 120px 0 120px; min-height: 120px; }
+    .about_image_link_blog .title { padding-top: 25px; }
+    .about_image_link_blog h2 { font-size: 26px; }
+    .about_image_link_blog h2:after { height: 4px; }
+
+
 }
