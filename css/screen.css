@@ -214,7 +214,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .wrapper{ width:100%; margin:0 auto;max-width: 1500px;position: relative;}
 .bg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-repeat: no-repeat;background-size: cover;}
 
-.backtop{border-radius: 50%; width: 40px; height: 40px; background: #000000; color: #ffffff; z-index: 999;border: 2px solid currentColor;position: fixed;bottom: 20px;right: 20px;cursor: pointer;transition: 0.2s ease all;opacity: 0;}
+.backtop{border-radius: 50%; width: 40px; height: 40px; background: #000000; color: #ffffff; z-index: 999;border: 2px solid currentColor;position: fixed;bottom: 20px;right: 20px;cursor: pointer;transition: 0.2s ease all;opacity: 0;    display: flex ; justify-content: center; align-items: center; }
 .backtop.show{opacity: 1;}
 .backtop:hover{transform: scale(1.01);border-color: var(--blue);}
 /* Header*/
@@ -224,7 +224,7 @@ header .search_col{position: relative;}
 header .search_col .in{width: 171px;border-radius: 20px;background-color: rgba(255,255,255,.07);padding:0 38px 0px 10px;color: var(--white);border: 1px solid rgba(255,255,255,.09);height: 38px;font-size: 14px;}
 header .search_col .circle_img{position: absolute;right: 0px;top: 0;background-image: url(../images/magni.svg);    background-size: 18px; background-repeat: no-repeat; background-position: center;cursor: pointer;}
 header .top_had{align-items: flex-end;padding: 5px 0;}
-header .top_had .right_col>a{margin-left: 15px;}
+header .top_had .right_col>a{margin-left: 15px;font-size: 21px;color: var(--blue);}
 header .bottom_col{margin-top: 20px;border-top: 1px solid var(--white);}
 header nav>ul{list-style: none;}
 header nav>ul>li{position: relative;}
@@ -302,9 +302,9 @@ header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a:before{displ
 .the_best .wrap{position: relative;margin-bottom: 45px;}
 
 .custom-nav { position: absolute; top: calc(50% - 18px); width: 100%; z-index: 9;pointer-events: none;}
-.custom-nav span{width: 36px;height: 36px;border-radius:50%;background-color: var(--blue);display: flex;justify-content: center;align-items: center;cursor: pointer;pointer-events: all;transition: 0.3s ease all;}
+.custom-nav span{width: 36px;height: 36px;border-radius:50%;background-color: var(--blue);display: flex;justify-content: center;align-items: center;cursor: pointer;pointer-events: all;transition: 0.3s ease all;color: #fff;}
 .custom-nav span img{transition: 0.3s ease all;}
-.custom-nav span:hover{background-color: var(--white);}
+.custom-nav span:hover{background-color: var(--white);color: var(--blue);}
 .custom-nav span:hover img{filter: brightness(0) saturate(100%) invert(23%) sepia(75%) saturate(2001%) hue-rotate(215deg) brightness(89%) contrast(93%);}
 .custom-nav .custom-prev{margin-left: -30px;}
 .custom-nav .custom-prev img{    transform: scale(-1); }
