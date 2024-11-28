@@ -56,10 +56,10 @@ body{position:relative;}
 ------------------------------------------------------------------------------*/
 
 /* Create the Default Headers  */
-h1, h2, h3, h4, h5, h6 {margin-bottom: 15px;color: var(--blue);}
+h1, h2, h3, h4, h5, h6 {margin-bottom: 15px;color: var(--blue);font-weight: 600;}
 
 /* Specific Header Settings */
-h1 {font-weight:700; font-size:50px; color:#fff; }
+h1 {font-weight:600; font-size:50px; color:#fff; }
 h2 {text-transform: uppercase; font-size: 48px; line-height: normal; letter-spacing: -1px; font-weight: 600;color: var(--black);}
 h2 strong{color: var(--blue);font-weight: 600;}
 h3,.h3 {font-size:32px;}
@@ -119,7 +119,7 @@ textarea{overflow:auto;}
 /*transition effect*/
 .tra,.in,.sub,img,a{-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;}
 
-.btn{position: relative;color: var(--white);border: 1px solid var(--white);font-size: 18.4px;font-weight: 700;text-transform: uppercase;line-height: 44px;padding:0px 32px;margin-left: 19px;text-align: center;}
+.btn{position: relative;color: var(--white);border: 1px solid var(--white);font-size: 15.52px;font-weight: 600;text-transform: uppercase;line-height: 44px;padding:0px 32px;margin-left: 19px;text-align: center;}
 .btn span{position: relative;}
 .btn_email span::after,
 .btn_yes span::after { content: ''; width: 20px; height: 20px; background-image: url(../images/email.svg); background-repeat: no-repeat; background-size: 18px; display: inline-flex ; background-position: center; position: relative; top: 3px; margin-left: 2px; }
@@ -214,18 +214,21 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 .wrapper{ width:100%; margin:0 auto;max-width: 1500px;position: relative;}
 .bg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-repeat: no-repeat;background-size: cover;}
 
+.backtop{border-radius: 50%; width: 40px; height: 40px; background: #000000; color: #ffffff; z-index: 999;border: 2px solid currentColor;position: fixed;bottom: 20px;right: 20px;cursor: pointer;transition: 0.2s ease all;opacity: 0;}
+.backtop.show{opacity: 1;}
+.backtop:hover{transform: scale(1.01);border-color: var(--blue);}
 /* Header*/
 header{position: absolute;top: 0;width: 100%;left: 0;z-index:999;}
 header .brand img{ max-height: 75px; }
 header .search_col{position: relative;}
 header .search_col .in{width: 171px;border-radius: 20px;background-color: rgba(255,255,255,.07);padding:0 38px 0px 10px;color: var(--white);border: 1px solid rgba(255,255,255,.09);height: 38px;font-size: 14px;}
-header .search_col .circle_img{position: absolute;right: 0px;top: 0;background-image: url(../images/magni.svg);    background-size: 18px; background-repeat: no-repeat; background-position: center;}
+header .search_col .circle_img{position: absolute;right: 0px;top: 0;background-image: url(../images/magni.svg);    background-size: 18px; background-repeat: no-repeat; background-position: center;cursor: pointer;}
 header .top_had{align-items: flex-end;padding: 5px 0;}
 header .top_had .right_col>a{margin-left: 15px;}
 header .bottom_col{margin-top: 20px;border-top: 1px solid var(--white);}
 header nav>ul{list-style: none;}
 header nav>ul>li{position: relative;}
-header nav>ul>li>a{color: rgba(255,255,255,.8);font-size: 16px;font-weight: bold;text-transform: uppercase;line-height: 60px;padding: 8px 0;position: relative;}
+header nav>ul>li>a{color: rgba(255,255,255,.8);font-size: 16px;font-weight:600;text-transform: uppercase;line-height: 60px;padding: 8px 0;position: relative;}
 header nav>ul>li>a::after{ content:""; position: absolute; top: -2px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width:0%; background-color: #e0151b; -webkit-transition: all .3s; -o-transition: all .3s; transition: all .3s; opacity: 1; height: 3px; }
 header nav>ul>li:hover>a::after{width: 100%;}
 header nav>ul>li:hover>a{color:var(--white);}
@@ -261,13 +264,15 @@ header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a:before{displ
 .banner::after{    background-image: url(../images/banner_bottom.svg); background-size: contain; background-repeat: no-repeat; background-position: bottom center; content: ''; width: 100%; height: 100%; bottom: -3px; left: 0; right: 0; position: absolute; z-index: 9; pointer-events: none;}
 .banner .wrapper {z-index: 9;}
 .banner .wrapper>div{width: 45%;}
-.banner p{font-size: 23px;color: #f1f1f1;line-height: 1.55;    text-align: justify !important; word-spacing: -2px;}
-.banner .btn{margin-top: 20px;}
+.banner h1{margin-bottom: 10px;}
+.banner p{font-size: 23px;color: #f1f1f1;line-height: 1.55;text-align: justify !important; word-spacing: -2px;}
+.banner .btn{margin-top: 11px;font-size: 18.4px;}
 .Discover_Our_World{padding: 30px 0 100px;}
 .Discover_Our_World h2{text-align: center;}
 .Discover_Our_World h6{text-align: center;text-transform: uppercase;letter-spacing: 1.1px;}
 .Discover_Our_World .inner{position: relative;padding: 95px 0;}
 .Discover_Our_World .left_col{width: 60%;background-color: rgb(245, 248, 251);padding: 2rem 2rem 2rem 2rem; border-radius: 22px;min-height: 520px;display: flex ; align-items: center;}
+.Discover_Our_World .colin h3{font-weight: bold;}
 .Discover_Our_World .colin img{margin-bottom: 25px;max-width: 80px;}
 .Discover_Our_World .colin p{max-width: 85%;margin-bottom: 27px;}
 .Discover_Our_World .right_col{width: 731px;height: 731px;position: absolute;right: 0;top: 0;bottom: 0;margin: auto;}
@@ -290,6 +295,7 @@ header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a:before{displ
 .about .right_col p:last-child{margin-bottom: 0;}
 
 .the_best{background-color: rgb(233 237 240);padding: 144px 0 185px;text-align: center;}
+.the_best .wrapper{padding: 0px 25px;}
 .the_best .colin{width: fit-content;padding: 30px 15px;}
 .the_best .col{    border-radius: 100%; width: 175px; height: 175px; background-color: #e9edf0; box-shadow: -11px -12px 20px 0 rgb(255 255 255 / 80%), 5px 12px 22px rgba(0, 0, 0, .1); mix-blend-mode: multiply;}
 .the_best .col img{mix-blend-mode: multiply;border-radius: 50%;}
@@ -321,7 +327,7 @@ header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a:before{displ
 
 .article_news {padding: 110px 0 80px;}
 .article_news h2{text-align: center;}
-.article_news .inner{}
+.article_news h2 strong{margin-right: 5px;}
 .article_news .col{ background-color: #000; border-radius: 28px; padding: 40px 0 40px 40px; min-height: 580px; transition: .5s all ease; -webkit-transition: .5s all ease; -o-transition: .5s all ease; -moz-transition: .5s all ease; box-shadow: 0 0 8px #00000029;margin-top: 40px;}
 .article_news .col .img{height: 241px;border-radius: 20px 0 0 20px;overflow: hidden;}
 .article_news .col .img img{width: 100%;max-width: 100%;    border-radius: 20px 0 0 20px;height: 100%;}
@@ -331,7 +337,7 @@ header nav>ul>li.mega-menu>.sub-menu>.menu-item>ul>li:first-child a:before{displ
 .article_news .col .date span:first-child{    font-size: 29px; font-style: normal; font-weight: 600; color: #021434; background-color: #ffffff; border-radius: 11px; line-height: 56px; padding: 0px 5px;margin-right: 10px;}
 .article_news .col h3{font-size: 28px; font-style: normal; font-weight: 600; line-height: 21px; margin-bottom: 15px;color: var(--white);}
 .article_news .col p{font-size:14px;color: var(--white);overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
-.article_news .col .btn{width: fit-content;font-weight: 400;}
+.article_news .col .btn{width: fit-content;font-weight: 400;font-size: 17px;}
 .article_news .owl-item{padding: 0 15px 30px;}
 
 .article_news .col:hover{background: #9DB0F4; box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.13); margin-top: 0;}
@@ -368,7 +374,7 @@ footer .col h3{font-size: 26px;font-weight: bold;width: 100%;}
 footer .col p,footer .col ul li a{font-size: 16px;font-weight: 500;line-height: 26px;}
 footer .col  ul li a:hover{color: var(--blue);}
 footer .bottom_col{text-align: center;padding: 75px 0px 60px;}
-footer .bottom_col p{font-size: 16px;font-weight: 400;color: var(--black);margin-bottom: 0px;}
+footer .bottom_col p{font-size: 16px;font-weight: 500;color: var(--black);margin-bottom: 0px;}
 footer .bottom_col p a{color: var(--blue);font-weight: 600;}
 footer .bottom_col p a:hover{color: var(--black);}
 

@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
                     center:true,
                 },
                 1400:{
-                    items: 6,
+                    items: 7,
                 }
               }
         });
@@ -122,6 +122,7 @@ jQuery(document).ready(function($){
         $(this).next().slideToggle();
     });
 
+    /* megnify */
     $('[data-pop="megnify"]').each(function(){
         var _this = $(this);
         _this.find('.image-popup-vertical-fit').magnificPopup({
@@ -141,13 +142,69 @@ jQuery(document).ready(function($){
             }        
         });
 
-    })
-        
+    });
+/* megnify */
+
+
+    
 
 
 });
 
 jQuery(window).resize(function($){
 
-})
+});
+
+
+var _btn = $('.backtop');
+jQuery(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    _btn.addClass('show');
+  } else {
+    _btn.removeClass('show');
+  }
+});
+
+_btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+/* counter */
+var a = 0;
+jQuery(window).scroll(function () {
+    var oTop = $(".model").offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $(".counter").each(function () {
+            var $this = $(this),
+                countTo = $this.attr("data-number");
+            $({
+                countNum: $this.text()
+            }).animate(
+                {
+                    countNum: countTo
+                },
+
+                {
+                    duration: 1200,
+                    easing: "swing",
+                    step: function () {
+                        //$this.text(Math.ceil(this.countNum));
+                        $this.text(
+                            Math.ceil(this.countNum).toLocaleString("en")
+                        );
+                    },
+                    complete: function () {
+                        $this.text(
+                            Math.ceil(this.countNum).toLocaleString("en")
+                        );
+                        //alert('finished');
+                    }
+                }
+            );
+        });
+        a = 1;
+    }
+});
 
