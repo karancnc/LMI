@@ -107,6 +107,50 @@ jQuery(document).ready(function($){
         });
     }
 
+    /* gallery slider */
+    if ($('.gallery_slider').length > 0) {
+        var owl2 = $('.gallery_slider .inner').owlCarousel({
+            //loop: true,
+            //autoWidth: true,
+            nav:false,
+            dots:true,
+            //center: true,
+            //autoplay: true,
+            //autoPlaySpeed: 500,
+            //autoPlayTimeout: 500,
+            //smartSpeed: 500,
+            responsive:{
+                0:{                  
+                    items: 2,
+                    slideBy: 2,
+                    margin: 20,
+                },
+                768:{                  
+                    items: 3,
+                    slideBy: 3,
+                    margin: 30,
+                },
+                1024:{                  
+                    items: 4,
+                    slideBy: 4,
+                    margin: 30,
+                },
+                1280:{                  
+                    items: 6,
+                    slideBy: 6,
+                    margin: 30,
+                },
+            }
+        });
+         // Custom Navigation
+        $('.gallery_slider .custom-prev').click(function () {
+            owl2.trigger('prev.owl.carousel');
+        });
+
+        $('.gallery_slider .custom-next').click(function () {
+            owl2.trigger('next.owl.carousel');
+        });
+    }
     /* mobile menu  */
     if ($(window).width() < 1024) {
         $('header .bottom_col nav>ul>li.menu-item>a').after('<span class="drop"></span>');
@@ -174,7 +218,7 @@ _btn.on('click', function(e) {
 /* counter */
 var a = 0;
 jQuery(window).scroll(function () {
-    var oTop = $(".model").offset().top - window.innerHeight;
+    var oTop = $(".model").offset().top - $(window).innerHeight();
     if (a == 0 && $(window).scrollTop() > oTop) {
         $(".counter").each(function () {
             var $this = $(this),
@@ -187,7 +231,7 @@ jQuery(window).scroll(function () {
                 },
 
                 {
-                    duration: 1200,
+                    duration: 2500,
                     easing: "swing",
                     step: function () {
                         //$this.text(Math.ceil(this.countNum));

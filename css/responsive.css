@@ -11,6 +11,8 @@
     .inner_banner { padding: 220px 0 225px; min-height: 640px; }
     .inner_banner p { font-size: 20px; }
     .about_image_link_blog { padding: 55px 0 75px; }
+    /* applications */
+    .years_experience p { font-size: 16px; }
 
 }
 @media only screen and (max-width:1599px){
@@ -60,13 +62,15 @@
     footer .col:nth-child(3) a:not(.btn) { width: 25px; height: 25px; margin-right: 10px; }
 
     /* about */
-    .about_image_link_blog .col { width: calc(33.33% - 2%); }
+    
+    .about_image_link_blog .col { height: 180px; }
     .about_image_link_blog { padding: 45px 0 25px; }
 
     /* technologies */
     .lefttext_rightimage .img_col.iteam-2 a{width:calc(50% - 5px);margin-bottom: 10px;}
     .lefttext_rightimage .img_col.iteam-2 a:nth-child(3){width: 100%;margin-bottom: 0;}
-
+    .title_text_image_video_btn .wrapper{padding: 0px 20px;}
+    .gallery_slider {padding: 0 25px;}
 
 
 }
@@ -139,7 +143,11 @@ header .hum{display: none;}
     .about_image_text div.col { width: 100%; padding: 40px 0; }
     .inner_banner { padding: 170px 0 170px; min-height: 536px; }
     /* technologies */
+    .about_image_link_blog .col { width: calc(33.33% - 2%);margin-top: 20px; }
     .lefttext_rightimage .img_col.iteam-2 a{width:100%;margin-bottom: 10px;}
+    body .materials_blog_three .btn_col a { margin-left: 0; width: calc(50% - 40px); line-height: 1.6; padding: 7px 17px; }
+    .materials_blog .img { height: 150px; }
+
 
 }
 @media only screen and (max-width:767px)
@@ -150,12 +158,13 @@ header .hum{display: none;}
     h1 { font-size: 26px; }
     h2 { font-size: 26px; }
     h6 { font-size: 14px; }
-    p { line-height: 23px; font-size: 15px; }
+    p { line-height: 1.4; font-size: 15px; }
     h3 { font-size: 22px; }
 
-    .banner p { font-size: 16px; letter-spacing: 1px; }
-    .btn { font-size: 14px; line-height: 38px; padding: 0px 32px; margin-left: 15px; }
-    .banner .btn { margin-top: 6px; }
+    .banner p { font-size: 16px;line-height: 1.4; letter-spacing: 0;}
+    .banner .wrapper .left_col p{display: none;}
+    .btn { font-size: 14px; line-height: 38px; padding: 0px 27px; margin-left: 15px; }
+    .banner .btn { margin-top: 6px;font-size: 14px;}
     .btn::after, .btn::before { width: 30px; height: 40px; left: -15px; }
     .btn::before { left: auto; right: -15px; }
     .Discover_Our_World .right_col { width: 280px; height: 280px; }
@@ -231,5 +240,32 @@ header .hum{display: none;}
     .lefttext_rightimage .wrapper>div { padding: 0 ; width: 100%; }
     .lefttext_rightimage { padding: 20px 0 40px; }
     .lefttext_rightimage .img_col{margin-top: 25px;}
+
+    .title_text_image_video ,.materials_blog,.title_text_image_video_btn{ padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .title_text_image_video .img_col .col { padding: 0 0 30px; width: 100%; }
+    .title_text_image_video.half .text_col { width: 100%; }
+    .title_text_image_video.half .img_col { width: 100%; }
+    .title_text_image_video_btn .img_col .col { width:100%; }
+    .title_text_image_video_btn .colin { padding-bottom: 0; }
+    
+    .materials_blog .colin { width: 100%; padding: 0 3vw 50px 3vw; }
+    .materials_blog .colin:last-child {padding-bottom: 0px;}
+    body .materials_blog_two .colin { width: 100%;}
+    body .materials_blog_two .colin:last-child{padding-bottom: 0px;}
+    body .materials_blog_three  .colin .col { padding-bottom: 0; }
+    body .materials_blog_three .btn_col a { width: calc(100% - 20px); margin: 0 auto !important; display: block; font-size: 11px; padding: 10px 10px;}
+    body .materials_blog_three .btn_col a+a {margin-top: 20px !important;}
+    body .materials_blog_three .colin .img { margin-top: 30px; padding-bottom: 0; }
+    body .materials_blog_three .colin {padding-bottom:30px;}
+    body .materials_blog_three .btn_col { margin-top: 20px; }
+    .gallery_slider { padding: 0 5px; }
+    .gallery_slider .col{height: 22vh;}
+
+    /* applications  */
+    .years_experience { padding: 20px 0 1rem; }
+    .years_experience .left_col{display: none;}
+    .years_experience .right_col { width: 100%; padding: 0 !important; }
+    .about_image_link_blog .col { margin: 0 0 30px; }
+
 
 }
