@@ -23,6 +23,10 @@
     footer .bg{ background-size: 110% 134%; background-position: top 30% center; }
     footer .yoga { top: -102px; left: -70px; }
 
+    /* our customers */
+    .customers_logo .col { width: calc(25% - 30px); height: 177px; }
+    footer .col h3{text-align: left;}
+
     
 }
 @media only screen and (max-width:1399px)
@@ -30,8 +34,13 @@
     .wrapper { max-width: 1200px; }
     .Discover_Our_World .left_col { min-height: 420px; }
     .Discover_Our_World .right_col { width: 620px; height: 620px; }
+}
+@media only screen and (max-width:1365px)
+{
+    .tooltip .tooltip-text { left: 62%; transform: translateX(-62%); }
+    .tooltip .tooltip-text::after { left: 56%;}
 
-
+    
 }
 @media only screen and (max-width:1279px) /* container size */
 {
@@ -62,16 +71,17 @@
     footer .col:nth-child(3) a:not(.btn) { width: 25px; height: 25px; margin-right: 10px; }
 
     /* about */
-    
     .about_image_link_blog .col { height: 180px; }
     .about_image_link_blog { padding: 45px 0 25px; }
-
     /* technologies */
     .lefttext_rightimage .img_col.iteam-2 a{width:calc(50% - 5px);margin-bottom: 10px;}
     .lefttext_rightimage .img_col.iteam-2 a:nth-child(3){width: 100%;margin-bottom: 0;}
     .title_text_image_video_btn .wrapper{padding: 0px 20px;}
     .gallery_slider {padding: 0 25px;}
 
+     /* our customers */
+     .customers_logo .col { width: calc(33.33% - 30px); height: 187px; }
+     .tooltip .tooltip-text{display: none;}
 
 }
 .social{display: none;}
@@ -148,12 +158,20 @@ header .hum{display: none;}
     body .materials_blog_three .btn_col a { margin-left: 0; width: calc(50% - 40px); line-height: 1.6; padding: 7px 17px; }
     .materials_blog .img { height: 150px; }
 
+     /* our customers */
+     .customers_logo .col { width: calc(33.33% - 30px); height: 135px; }
+
+     /* gallery */
+    .gallery_sec .wrapper {  display: flex;justify-content: space-between;gap: 0;flex-wrap: wrap;}
+    .gallery_sec .col1 {height: 436px;width: 100% !important;}
+    .gallery_sec .col:not(:first-child){height: 203px;width: calc(50% - 15px);margin-top: 30px;}
+
 
 }
 @media only screen and (max-width:767px)
 {
     header .brand img { max-height: 46px; }
-    .banner { padding: 130px 0 70px; }
+    .banner { padding: 180px 0 70px; }
     h1, h2, h3, h4, h5, h6{margin-bottom: 10px;}
     h1 { font-size: 26px; }
     h2 { font-size: 26px; }
@@ -167,6 +185,7 @@ header .hum{display: none;}
     .banner .btn { margin-top: 6px;font-size: 14px;}
     .btn::after, .btn::before { width: 30px; height: 40px; left: -15px; }
     .btn::before { left: auto; right: -15px; }
+    .Discover_Our_World { padding: 50px 0 0; }
     .Discover_Our_World .right_col { width: 280px; height: 280px; }
     .Discover_Our_World .left_col { padding: 20px; }
     .Discover_Our_World .colin p { max-width: 100%; }
@@ -201,7 +220,7 @@ header .hum{display: none;}
     footer .inner{padding-bottom: 50px;position: relative;margin-top: 40px; }
     footer .col .btn.btn-black { position: absolute; bottom: 0; left: 0; right: 0; width: fit-content; margin: 0 auto; }
     footer .col h3 { font-size: 18px; font-weight: 600; }
-    footer { padding: 55px 0 0; margin-top: 30px;}
+    footer { padding: 66px 0 0; margin-top: 0px;}
     footer .bg { background-size: auto; background-position: top center; }
     footer .logo { max-width: 180px; }
     footer .yoga { top: -120px; left: 0; max-width: 130px; }
@@ -215,6 +234,7 @@ header .hum{display: none;}
     
     /* about */
     .inner_banner { padding: 170px 0 170px; }
+    .inner_banner::after { bottom: -1px; }
     .inner_banner .btn { margin-top: 10px; }
     .about_image_link_blog { padding: 25px 0 25px; }
     .about_image_link_blog .col { width: 100%; margin: 0  0 20px;}
@@ -266,6 +286,20 @@ header .hum{display: none;}
     .years_experience .left_col{display: none;}
     .years_experience .right_col { width: 100%; padding: 0 !important; }
     .about_image_link_blog .col { margin: 0 0 30px; }
+    .title_text_image_video .wrapper+.wrapper { margin-top: 50px; }
+    .years_experience { padding: 30px 0; }
+    .title_text_image_video .img_col img {max-height: 300px;}
+    /* .title_text_image_video .text_col,.title_text_image_video .img_col{padding: 0;} */
+    .title_text_image_video.half .img_col.iteam-2 .col{width: 100%;}
+    .link_image_image .wrapper>div{width: 100%;}
+
+   /* our customers */
+   .customers_logo .col { width: calc(50% - 30px); height: 24.5vw; }
+   .customers_logo .wrapper{padding: 0;}
+
+     /* gallery */
+     .gallery_sec .col1 {height: 436px;}
+     .gallery_sec .col:not(:first-child){height: 203px;width:100%;margin-top: 30px;}
 
 
 }

@@ -18,6 +18,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
         <link href="css/screen.css" rel="stylesheet" />
         <link href="css/responsive.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.8.4/dist/smooth-scrollbar.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
     </head>
     <body>
@@ -35,13 +36,15 @@
                                     <input type="submit" class="sub circle_img">
                                 </form>
                             </div>
-                            <a href="#" class="circle_img">
+                            <a href="#" class="circle_img tooltip">
                                 <!-- <img src="images/linkdin.svg" alt=""> -->
                                 <i class="fa-brands fa-linkedin"></i>
+                                <span class="tooltip-text">Follow on LinkedIn</span>
                             </a>
-                            <a href="#" class="circle_img">
+                            <a href="#" class="circle_img tooltip">
                                 <!-- <img src="images/email.svg" alt=""> -->
                                 <i class="fa-solid fa-envelope"></i>
+                                <span class="tooltip-text">Send us an email</span>
                             </a>
                         </div>
                         <img src="images/hum.png" class="hum" alt="">
@@ -182,7 +185,7 @@
                     </div>
                 </section>
                 <section class="about">
-                    <div class="wrapper d_flex d_flex_jb">
+                    <div class="wrapper d_flex d_flex_jb animation_sec">
                         <div class="left_col">
                             <h2>About US</h2>
                             <a href="#" class="btn btn-white"><span>Read More</span></a>
@@ -194,7 +197,7 @@
                     </div>
                 </section>
                 <section class="the_best">
-                    <div class="wrapper">
+                    <div class="wrapper animation_sec">
                         <h2>lMI is <strong>trusted</strong> by the best</h2>
                         <div class="wrap">
                             <div class="inner owl-carousel">
@@ -252,7 +255,7 @@
                         <h2><strong>LMI</strong>LATEST <br>ARTICLE & NEWS</h2>
                         <div class="inner">
                             <div class="wrap owl-carousel">
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news1.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -265,7 +268,7 @@
                                         <div class="btn "><span> Read More </span></div>
                                     </div>
                                 </a>
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news2.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -278,7 +281,7 @@
                                         <div class="btn "><span> Read More </span></div>
                                     </div>
                                 </a>
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news3.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -292,7 +295,7 @@
                                     </div>
                                 </a>
 
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news1.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -305,7 +308,7 @@
                                         <div class="btn "><span> Read More </span></div>
                                     </div>
                                 </a>
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news2.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -318,7 +321,7 @@
                                         <div class="btn "><span> Read More </span></div>
                                     </div>
                                 </a>
-                                <a href="#" class="col">
+                                <a href="#" class="col animation_sec">
                                     <div class="img"><img src="images/news3.webp" alt=""></div>
                                     <div class="text">
                                         <div class="date d_flex d_flex_ac">
@@ -376,7 +379,8 @@
                     <div class="col">
                         <h3>Follow us on social Media</h3>
                         <div class="d_flex d_flex_ac d_flex_jc">
-                            <a href="#"><img src="images/linkdin.svg" alt="linkdin"></a>
+                            <a href="#" class="tooltip"><img src="images/linkdin.svg" alt="linkdin">
+                                <span class="tooltip-text">Follow on LinkedIn</span></a>
                             <a href="#" class="btn btn-black"><span>Let's connect</span></a>
                         </div>
                     </div>

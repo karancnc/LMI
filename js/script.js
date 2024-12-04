@@ -2,25 +2,29 @@
 
 jQuery(window).load(function($){
     setTimeout(function(){
-
+        jQuery('.banner .wrapper>div').addClass('active');
     });
 });
 
 
 jQuery(document).ready(function($){
 
-    var _lhref = $('.main_circle .col:first-child').attr('href');
-    var _limg = $('.main_circle .col:first-child').attr('data-img');
-    var _ltitle = $('.main_circle .col:first-child').attr('data-title');
-    var _lsubtitle = $('.main_circle .col:first-child').attr('data-subtitle');
-    var _lbgimg = $('.main_circle .col:first-child').attr('data-bgimg');
-    var _lbgimg = 'url('+_lbgimg+')';
+    /* circle animation */
+    if($('.Discover_Our_World .inner').hasClass('come-in')){
+        
+        var _lhref = $('.main_circle .col:first-child').attr('href');
+        var _limg = $('.main_circle .col:first-child').attr('data-img');
+        var _ltitle = $('.main_circle .col:first-child').attr('data-title');
+        var _lsubtitle = $('.main_circle .col:first-child').attr('data-subtitle');
+        var _lbgimg = $('.main_circle .col:first-child').attr('data-bgimg');
+        var _lbgimg = 'url('+_lbgimg+')';
+        $('.Discover_Our_World .colin .btn').attr('href' , _lhref);
+        $('.Discover_Our_World .colin img').attr('src' , _limg);
+        $('.Discover_Our_World .colin h3').text(_ltitle);
+        $('.Discover_Our_World .colin p').text(_lsubtitle);
+        $('.Discover_Our_World .right_col .bg').css('background-image' , _lbgimg);
+    }
 
-    $('.Discover_Our_World .colin .btn').attr('href' , _lhref);
-    $('.Discover_Our_World .colin img').attr('src' , _limg);
-    $('.Discover_Our_World .colin h3').text(_ltitle);
-    $('.Discover_Our_World .colin p').text(_lsubtitle);
-    $('.Discover_Our_World .right_col .bg').css('background-image' , _lbgimg);
     
     $('.main_circle .col').hover(function(){
         var _href =  $(this).attr('href');
@@ -35,6 +39,7 @@ jQuery(document).ready(function($){
         $('.Discover_Our_World .colin h3').text(_title);
         $('.Discover_Our_World .colin p').text(_subtitle);
     });
+ /* circle animation end */
 
     if ($('.the_best').length > 0) {
         var owl = $('.the_best .inner').owlCarousel({
@@ -158,7 +163,7 @@ jQuery(document).ready(function($){
     $('header .hum').click(function(){
         $('header .bottom_col').addClass('active');
     });
-    $('header .bottom_col .close').click(function(){
+    $('header .bottom_col .close,header .bottom_col .bg').click(function(){
         $('header .bottom_col').removeClass('active');
     });
     $('header .bottom_col nav>ul>li.menu-item>a+.drop').click(function(){
@@ -252,3 +257,58 @@ jQuery(window).scroll(function () {
     }
 });
 
+
+
+var Scrollbar = window.Scrollbar;
+
+Scrollbar.init(document.querySelector('#full_wrapper'), {
+    damping: 0.1,  // Smoothness level
+    thumbMinSize: 20,  // Minimum size of the scrollbar thumb
+    renderByPixels: true,  // Use integer values for rendering
+    alwaysShowTracks: true,  // Always show scrollbar tracks
+    continuousScrolling: true  // Allow continuous scrolling when reaching boundaries
+  });
+
+ 
+(function($)
+ {
+  $.fn.visible = function(partial) {
+
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          bottom       = _top + $t.height(),
+          compareTop    = partial === true ? bottom : _top,
+          compareBottom = partial === true ? _top : bottom;
+
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  };
+})(jQuery);
+var win = $(window);
+var allMods = $(".Discover_Our_World .inner,.Discover_Our_World h2,.Discover_Our_World h6,.animation_sec");
+win.scroll(function(event) {
+  allMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+          setTimeout(function(){
+              el.addClass("come-in"); 
+              setTimeout(function(){
+                  var _lhref = $('.main_circle .col:first-child').attr('href');
+                  var _limg = $('.main_circle .col:first-child').attr('data-img');
+                  var _ltitle = $('.main_circle .col:first-child').attr('data-title');
+                  var _lsubtitle = $('.main_circle .col:first-child').attr('data-subtitle');
+                  var _lbgimg = $('.main_circle .col:first-child').attr('data-bgimg');
+                  var _lbgimg = 'url('+_lbgimg+')';
+                  $('.Discover_Our_World .colin .btn').attr('href' , _lhref);
+                  $('.Discover_Our_World .colin img').attr('src' , _limg);
+                  $('.Discover_Our_World .colin h3').text(_ltitle);
+                  $('.Discover_Our_World .colin p').text(_lsubtitle);
+                  $('.Discover_Our_World .right_col .bg').css('background-image' , _lbgimg);
+
+              },1600);
+          },i*50);
+      } 
+  });
+});
