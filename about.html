@@ -15,6 +15,7 @@
         <title>Lmi-about</title>
         <link rel="mask-icon" href="images/site/favicon.ico" color="white"> 
         <link href="fonts/stylesheet.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
         <link href="css/screen.css" rel="stylesheet" />
         <link href="css/responsive.css" rel="stylesheet" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>        
@@ -34,8 +35,16 @@
                                     <input type="submit" class="sub circle_img">
                                 </form>
                             </div>
-                            <a href="#" class="circle_img"><img src="images/linkdin.svg" alt=""></a>
-                            <a href="#" class="circle_img"><img src="images/email.svg" alt=""></a>
+                            <a href="#" class="circle_img tooltip">
+                                <!-- <img src="images/linkdin.svg" alt=""> -->
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span class="tooltip-text">Follow on LinkedIn</span>
+                            </a>
+                            <a href="#" class="circle_img tooltip">
+                                <!-- <img src="images/email.svg" alt=""> -->
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="tooltip-text">Send us an email</span>
+                            </a>
                         </div>
                         <img src="images/hum.png" class="hum" alt="">
                     </div>
@@ -46,7 +55,7 @@
                             <ul class="d_flex d_flex_jb">
                                 <li><a href="#">HOME</a></li>
                                 <li class="menu-item">
-                                    <a href="#">ABOUT</a>
+                                    <a href="#" class="active">ABOUT</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">The Story of LMI</a></li>
                                         <li><a href="#">Quality Assurance</a></li>
@@ -160,50 +169,52 @@
                 </section>
             </div>
             <div class="push"><!-- --></div>
-        </div>
-        <!-- FOOTER -->
-        <footer>
-            <div class="bg"></div>
-            <div class="wrapper">
-                <img src="images/yoga.svg" class="yoga" alt="">
-                <a href="index.html" class="logo"><img src="images/red_logo.webp" alt="red_logo"></a>
-                <div class="inner d_flex d_flex_jb">
-                    <div class="col">
-                        <h3>Address</h3>
-                        <p>4 Ben Gurion St.<br>
-                            "The Red House Building"<br>
-                            Ness-Ziona, Israel,<br>
-                            Zip 7403201</p>
-                    </div>
-                    <div class="col">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Technologies</a></li>
-                            <li><a href="#">Applications</a></li>                            
-                        </ul>
-                        <ul>
-                            <li><a href="#">Our Customers</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">LMI News</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Follow us on social Media</h3>
-                        <div class="d_flex d_flex_ac d_flex_jc">
-                            <a href="#"><img src="images/linkdin.svg" alt="linkdin"></a>
-                            <a href="#" class="btn btn-black"><span>Let's connect</span></a>
+            <footer>
+                <div class="bg"></div>
+                <div class="wrapper">
+                    <img src="images/yoga.svg" class="yoga" alt="">
+                    <a href="index.html" class="logo"><img src="images/red_logo.webp" alt="red_logo"></a>
+                    <div class="inner d_flex d_flex_jb">
+                        <div class="col">
+                            <h3>Address</h3>
+                            <p>4 Ben Gurion St.<br>
+                                "The Red House Building"<br>
+                                Ness-Ziona, Israel,<br>
+                                Zip 7403201</p>
+                        </div>
+                        <div class="col">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Technologies</a></li>
+                                <li><a href="#">Applications</a></li>                            
+                            </ul>
+                            <ul>
+                                <li><a href="#">Our Customers</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">LMI News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h3>Follow us on social Media</h3>
+                            <div class="d_flex d_flex_ac d_flex_jc">
+                                <a href="#" class="tooltip"><img src="images/linkdin.svg" alt="linkdin">
+                                    <span class="tooltip-text">Follow on LinkedIn</span></a>
+                                <a href="#" class="btn btn-black"><span>Let's connect</span></a>
+                            </div>
                         </div>
                     </div>
+                    <div class="bottom_col">
+                        <p>© 2023 LMI | All Rights Reserved | Designed and maintained by <a href="#">codeandcore</a></p>
+                    </div>
                 </div>
-                <div class="bottom_col">
-                    <p>© 2023 LMI | All Rights Reserved | Designed and maintained by <a href="#">codeandcore</a></p>
-                </div>
-            </div>
-
-        </footer>
+    
+            </footer>
+        </div>
+        <!-- FOOTER -->
+        <script src="js/smooth-scrollbar.js"></script>
         <script src="js/owl.js"></script>
         <script src="js/script.js"></script>
     </body>

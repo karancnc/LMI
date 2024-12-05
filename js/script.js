@@ -221,94 +221,129 @@ _btn.on('click', function(e) {
 
 
 /* counter */
-var a = 0;
-jQuery(window).scroll(function () {
-    var oTop = $(".model").offset().top - $(window).innerHeight();
-    if (a == 0 && $(window).scrollTop() > oTop) {
-        $(".counter").each(function () {
-            var $this = $(this),
-                countTo = $this.attr("data-number");
-            $({
-                countNum: $this.text()
-            }).animate(
-                {
-                    countNum: countTo
-                },
+// var a = 0;
+// jQuery(window).scroll(function () {
+//     var oTop = $(".model").offset().top - $(window).innerHeight();
+//     if (a == 0 && $(window).scrollTop() > oTop) {
+//         $(".counter").each(function () {
+//             var $this = $(this),
+//                 countTo = $this.attr("data-number");
+//             $({
+//                 countNum: $this.text()
+//             }).animate(
+//                 {
+//                     countNum: countTo
+//                 },
 
-                {
-                    duration: 2500,
-                    easing: "swing",
-                    step: function () {
-                        //$this.text(Math.ceil(this.countNum));
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en")
-                        );
-                    },
-                    complete: function () {
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en")
-                        );
-                        //alert('finished');
-                    }
-                }
-            );
-        });
-        a = 1;
-    }
+//                 {
+//                     duration: 2500,
+//                     easing: "swing",
+//                     step: function () {
+//                         //$this.text(Math.ceil(this.countNum));
+//                         $this.text(
+//                             Math.ceil(this.countNum).toLocaleString("en")
+//                         );
+//                     },
+//                     complete: function () {
+//                         $this.text(
+//                             Math.ceil(this.countNum).toLocaleString("en")
+//                         );
+//                     }
+//                 }
+//             );
+//         });
+//         a = 1;
+//     }
+// });
+
+/* Scrollbar */
+
+var Scrollbar = window.Scrollbar;
+var scrollbarInstance = Scrollbar.init(document.querySelector('#full_wrapper'), {
+  damping: 0.1,            
+ thumbMinSize: 20,         // Minimum thumb size
+ renderByPixels: true,     // Render by whole pixels
+ alwaysShowTracks: false,  // Scrollbar tracks visibility
+ continuousScrolling: true // Allow scrolling beyond content bounds
+});
+ 
+/* Scrollbar end */
+
+/* Counter Logic */
+var a = 0;
+
+// Listen to Smooth Scrollbar's scroll event
+scrollbarInstance.addListener(function () {
+  var scrollTop = scrollbarInstance.scrollTop; // Get Smooth Scrollbar's scroll position
+  var windowHeight = $(window).innerHeight(); // Height of the viewport
+  var oTop = $("footer").offset().top - $("#full_wrapper").offset().top - windowHeight / 3;
+ console.log(scrollTop);
+ console.log(oTop);
+  if (a == 0 && scrollTop > oTop) {
+    $(".counter").each(function () {
+      var $this = $(this),
+        countTo = $this.attr("data-number");
+      $({ countNum: $this.text() }).animate(
+        {
+          countNum: countTo,
+        },
+        {
+          duration: 2500,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.ceil(this.countNum).toLocaleString("en"));
+          },
+          complete: function () {
+            $this.text(Math.ceil(this.countNum).toLocaleString("en"));
+          },
+        }
+      );
+    });
+    a = 1; // Ensure the counter runs only once
+  }
 });
 
 
+// jQuery Visible Function (with Smooth Scrollbar support)
+(function ($) {
+    $.fn.visible = function (partial) {
+      var $t = $(this);
+      var scrollTop = scrollbarInstance.scrollTop; // Get Smooth Scrollbar's scroll top
+      var scrollBottom = scrollTop + $(window).height() / 3; // Bottom edge of the visible viewport
+      var elementTop = $t.offset().top - $("#full_wrapper").offset().top ; // Adjust for Smooth Scrollbar
+      var elementBottom = elementTop + $t.outerHeight();
+      var compareTop = partial === true ? elementBottom : elementTop;
+      var compareBottom = partial === true ? elementTop : elementBottom;
+  
+      return compareBottom <= scrollBottom && compareTop >= scrollTop;
+    };
+  })(jQuery);
 
-var Scrollbar = window.Scrollbar;
-
-Scrollbar.init(document.querySelector('#full_wrapper'), {
-    damping: 0.1,  // Smoothness level
-    thumbMinSize: 20,  // Minimum size of the scrollbar thumb
-    renderByPixels: true,  // Use integer values for rendering
-    alwaysShowTracks: true,  // Always show scrollbar tracks
-    continuousScrolling: true  // Allow continuous scrolling when reaching boundaries
-  });
-
- 
-(function($)
- {
-  $.fn.visible = function(partial) {
-
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          bottom       = _top + $t.height(),
-          compareTop    = partial === true ? bottom : _top,
-          compareBottom = partial === true ? _top : bottom;
-
-      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-  };
-})(jQuery);
-var win = $(window);
+// Target elements
 var allMods = $(".Discover_Our_World .inner,.Discover_Our_World h2,.Discover_Our_World h6,.animation_sec");
-win.scroll(function(event) {
-  allMods.each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-          setTimeout(function(){
-              el.addClass("come-in"); 
-              setTimeout(function(){
-                  var _lhref = $('.main_circle .col:first-child').attr('href');
-                  var _limg = $('.main_circle .col:first-child').attr('data-img');
-                  var _ltitle = $('.main_circle .col:first-child').attr('data-title');
-                  var _lsubtitle = $('.main_circle .col:first-child').attr('data-subtitle');
-                  var _lbgimg = $('.main_circle .col:first-child').attr('data-bgimg');
-                  var _lbgimg = 'url('+_lbgimg+')';
-                  $('.Discover_Our_World .colin .btn').attr('href' , _lhref);
-                  $('.Discover_Our_World .colin img').attr('src' , _limg);
-                  $('.Discover_Our_World .colin h3').text(_ltitle);
-                  $('.Discover_Our_World .colin p').text(_lsubtitle);
-                  $('.Discover_Our_World .right_col .bg').css('background-image' , _lbgimg);
 
-              },1600);
-          },i*50);
-      } 
+// Listen to Smooth Scrollbar's scroll event
+scrollbarInstance.addListener(() => {
+  allMods.each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      setTimeout(function () {
+        el.addClass("come-in");
+        setTimeout(function () {
+          var _lhref = $(".main_circle .col:first-child").attr("href");
+          var _limg = $(".main_circle .col:first-child").attr("data-img");
+          var _ltitle = $(".main_circle .col:first-child").attr("data-title");
+          var _lsubtitle = $(".main_circle .col:first-child").attr("data-subtitle");
+          var _lbgimg = $(".main_circle .col:first-child").attr("data-bgimg");
+          var _lbgimg = "url(" + _lbgimg + ")";
+          $(".Discover_Our_World .colin .btn").attr("href", _lhref);
+          $(".Discover_Our_World .colin img").attr("src", _limg);
+          $(".Discover_Our_World .colin h3").text(_ltitle);
+          $(".Discover_Our_World .colin p").text(_lsubtitle);
+          $(".Discover_Our_World .right_col .bg").css("background-image", _lbgimg);
+        }, 1600);
+      }, i * 50);
+    }
   });
+ 
 });
