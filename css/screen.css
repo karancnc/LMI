@@ -222,6 +222,7 @@ header{position: absolute;top: 0;width: 100%;left: 0;z-index:999;}
 header .brand img{ max-height: 61px; }
 header .search_col{position: relative;}
 header .search_col .in{width: 171px;border-radius: 20px;background-color: rgba(255,255,255,.07);padding:0 38px 0px 10px;color: var(--white);border: 1px solid rgba(255,255,255,.09);height: 38px;font-size: 14px;}
+header .search_col .in::placeholder{color: var(--white);}
 header .search_col .circle_img{position: absolute;right: 0px;top: 0;background-image: url(../images/magni.svg);    background-size: 18px; background-repeat: no-repeat; background-position: center;cursor: pointer;}
 header .top_had{align-items: flex-end;padding: 5px 0;}
 header .top_had .right_col>a{margin-left: 15px;font-size: 21px;color: var(--blue);display: flex;}
@@ -624,6 +625,7 @@ body .materials_blog_three .btn_col a+a{margin-left: 55px;}
 .get_touch .right_col form{display: flex;justify-content: space-between;width: 100%;flex-wrap: wrap;}
 .get_touch .right_col form .col{display: flex;justify-content: space-between;width: calc(50% - 10px);}
 .get_touch .right_col .in{ border-radius: 12px ; border: 1px solid #D1D1D1 ; box-shadow: none ; padding: 14px 14px 14px 56px ; height: 53px; background-repeat: no-repeat; background-position: 22px center;font-size: 15px;    color: #333; background-color: #fff;width: 100%;margin-bottom: 16px;font-weight: 600;font-family: var(--gilroy);}
+.get_touch .right_col .in:focus{border-color: var(--blue);}
 .get_touch .right_col textarea.in{ height: 178px;background-image: url(../images/message-icon.svg);    background-position: 22px 22px;}
 .get_touch .right_col .name{background-image: url(../images/user-icon.svg);}
 .get_touch .right_col .email{background-image: url(../images/env-icon.svg);}
