@@ -193,8 +193,28 @@ jQuery(document).ready(function($){
 
     });
 /* megnify */
+  if ($('.file-upload-input').length > 0) {
+    $(".file-upload-input").on("change", function () {
+      var file = this.files[0];
+      var $error = $(this).siblings(".error-message");
+      var $fileNameDisplay = $(this).siblings(".selected-file");
 
+      // Clear any previous messages
+      $error.text("");
+      $fileNameDisplay.text("");
 
+      if (file) {
+        var fileSizeMB = (file.size / (1024 * 1024)).toFixed(2); // Convert to MB
+
+        if (fileSizeMB > 64) {
+          $error.text("Error: The selected file exceeds the maximum size of 64 MB.");
+          $(this).val(""); // Clear the input
+        } else {
+          $fileNameDisplay.text("Selected file: " + file.name + " (" + fileSizeMB + " MB)");
+        }
+      }
+    });
+  }
     
 
 

@@ -183,10 +183,40 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right_col"></div>
+                        <div class="right_col">
+                            <form>
+                                <div class="col"><input type="text" class="in name" placeholder="Name"> </div>  
+                                <div class="col"><input type="text" class="in email" placeholder="Email"> </div> 
+                                <div class="col"><input type="text" class="in phone" placeholder="Phone"> </div> 
+                                <div class="col"><input type="text" class="in subject" placeholder="Subject"> </div> 
+                                <textarea placeholder="Message" class="in"></textarea>
+                                <div class="file-upload-container">
+                                    <div>
+                                      <p class="file-info">Files Attachment</p>
+                                      <p class="max-file-size">Max. file size: 64 MB.</p>
+                                    </div>
+                                    <div class="file-upload-box">                                      
+                                      <img src="images/upload-file.svg" alt="upload-file">
+                                      <p class="file-types">Accepted file types: stl, x_t, sldp, wrl, 3mf, obj. Max. file size: 64 MB.</p>
+                                      <input type="file" class="file-upload-input" accept=".stl, .x_t, .sldp, .wrl, .3mf, .obj">
+                                      <p class="selected-file"></p>
+                                      <p class="error-message"></p>
+                                    </div>
+                                  </div>
+                                <button type="submit" class="btn btn-black">SUBMIT</button>
+                            </form>
+                            <div class="we_transfer">
+                                <h5>Are your files too large?</h5>
+                                <p>Send your files with <a href="#">WeTransfer</a></p>
+                            </div>
+                        </div>
                     </div>
                 </section>
-              
+                <section class="map_sec">
+                    <div class="wrapper">
+                        <iframe width="100%" height="474px" id="gmap_canvas" src="https://maps.google.com/maps?q=4%20Ben%20Gurion%20St%20Ness-Ziona&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </section>
             </div>
             <div class="push"><!-- --></div>
             <footer>
@@ -235,6 +265,7 @@
         </div>
         <!-- FOOTER -->
         <!-- back to top -->
+  
          <div class="backtop"><i class="fa-solid fa-angle-up"></i></div>
         <script src="js/smooth-scrollbar.js"></script>
         <script src="js/owl.js"></script>
